@@ -1,6 +1,8 @@
 # ForumHub - Backend System
-Descrição
 ForumHub é uma aplicação backend desenvolvida durante a Clallenge ministrada pela plataforma Alura em Java com Spring Boot, destinada a gerenciar operações CRUD em um sistema de fórum. A aplicação é projetada para manipular entidades como Topico, Curso, Resposta, Usuario e Perfil, seguindo o padrão de arquitetura MVC (Model-View-Controller).
+
+## Extras
+Implementação das rotas de usuários e respostas que permiti criar, listar, atualizar e excluir os mesmos.
 
 ## Funcionalidades
 Gerenciamento de Tópicos: Criação, listagem, atualização e exclusão de tópicos.
