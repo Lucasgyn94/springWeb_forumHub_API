@@ -1,0 +1,16 @@
+# Ignore application.properties
+src/main/resources/application.properties
+
+# Ignore target directory (Maven/Gradle build output)
+target/
+
+# Ignore other common files and directories
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+*.log
+*.swp
+.DS_Store
