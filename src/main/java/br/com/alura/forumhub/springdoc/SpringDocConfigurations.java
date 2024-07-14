@@ -22,7 +22,18 @@ public class SpringDocConfigurations {
                                         .bearerFormat("JWT")))
                 .info(new Info()
                         .title("API Forum Hub")
-                        .description("API Rest da aplicação forumhub, contendo as funcionalidades de CRUD de topicos")
+                        .description("A API Forum Hub é uma aplicação RESTful desenvolvida com Spring Boot para gerenciar um fórum de discussões. " +
+                                "Ela permite a criação, listagem, atualização e exclusão de tópicos, bem como a gestão de usuários e respostas. " +
+                                "Com uma arquitetura robusta e segura, utilizando autenticação JWT, a API é ideal para ser utilizada como backend de um fórum de discussões " +
+                                "em projetos de pequeno a médio porte.\n\n" +
+                                "## Recursos Principais:\n" +
+                                "- **Gerenciamento de Tópicos:** Criação, listagem, atualização e exclusão de tópicos do fórum.\n" +
+                                "- **Autenticação JWT:** Autenticação segura utilizando JSON Web Tokens (JWT).\n" +
+                                "- **Gerenciamento de Usuários:** Cadastro e autenticação de usuários.\n" +
+                                "- **Gerenciamento de Respostas:** Adição e gestão de respostas para os tópicos.\n" +
+                                "- **Documentação Interativa:** Documentação de API interativa e amigável ao desenvolvedor com Swagger UI.\n" +
+                                "- **Validações de Dados:** Validação de campos obrigatórios e prevenção de duplicação de tópicos.\n\n" +
+                                "Este projeto foi desenvolvido como parte do programa de formação da Alura, aplicando boas práticas de desenvolvimento e segurança.")
                         .contact(new Contact()
                                 .name("Time Backend")
                                 .email("needslucas944@gmail.com"))
@@ -30,5 +41,4 @@ public class SpringDocConfigurations {
                                 .name("Apache 2.0")
                                 .url("http://voll.med/api/licenca")));
     }
-
 }
