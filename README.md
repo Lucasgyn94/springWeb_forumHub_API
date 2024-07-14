@@ -12,14 +12,14 @@ Autenticação e Autorização: Implementação de autenticação via JWT e auto
 Documentação da API: Integração com SpringDoc e Swagger para documentação e testes da API.
 
 ## Tecnologias Utilizadas
-Java 17
-Spring Boot
-Spring Security
-Spring Data JPA
-Hibernate
-PostgreSQL
-Maven
-Swagger e SpringDoc para documentação
+Java 17<br>
+Spring Boot<br>
+Spring Security<br>
+Spring Data JPA<br>
+Hibernate<br>
+PostgreSQL<br>
+Maven<br>
+Swagger e SpringDoc para documentação<br>
 
 
 ## Configuração do Ambiente<br>
