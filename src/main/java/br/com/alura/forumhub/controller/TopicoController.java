@@ -2,7 +2,7 @@ package br.com.alura.forumhub.controller;
 
 
 import br.com.alura.forumhub.dto.TopicoDto;
-import br.com.alura.forumhub.model.TopicoFormulario;
+import br.com.alura.forumhub.forms.TopicoFormulario;
 import br.com.alura.forumhub.service.TopicoService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;

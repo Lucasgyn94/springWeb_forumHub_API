@@ -1,14 +1,14 @@
 package br.com.alura.forumhub.service;
 
 import br.com.alura.forumhub.dto.TopicoDto;
+import br.com.alura.forumhub.exception.ValidacaoException;
 import br.com.alura.forumhub.model.Curso;
 import br.com.alura.forumhub.model.Topico;
-import br.com.alura.forumhub.model.TopicoFormulario;
+import br.com.alura.forumhub.forms.TopicoFormulario;
 import br.com.alura.forumhub.model.Usuario;
 import br.com.alura.forumhub.repository.CursoRepository;
 import br.com.alura.forumhub.repository.TopicoRepository;
 import br.com.alura.forumhub.repository.UsuarioRepository;
-import br.com.alura.forumhub.service.AutenticacaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,6 +41,10 @@ public class TopicoService {
     }
 
     public TopicoDto criar(TopicoFormulario form) {
+        if (topicoRepository.existsByTituloAndMensagem(form.getTitulo(), form.getMensagem())) {
+            throw new ValidacaoException("Tópico já existe com o mesmo título e mensagem");
+        }
+
         String emailDoUsuarioLogado = autenticacaoService.getEmailUsuarioLogado();
         Usuario autor = usuarioRepository.findByEmail(emailDoUsuarioLogado)
                 .orElseThrow(() -> new RuntimeException("Autor não encontrado"));

@@ -7,7 +7,7 @@ CREATE TABLE Curso (
 CREATE TABLE Usuario (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
     senha VARCHAR(100) NOT NULL
 );
 
@@ -20,7 +20,7 @@ CREATE TABLE Topico (
     id SERIAL PRIMARY KEY,
     titulo VARCHAR(100) NOT NULL,
     mensagem TEXT NOT NULL,
-    data_criacao TIMESTAMP NOT NULL,
+    data_criacao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     status VARCHAR(20) NOT NULL,
     autor_id INT NOT NULL REFERENCES Usuario(id),
     curso_id INT NOT NULL REFERENCES Curso(id)
@@ -29,7 +29,7 @@ CREATE TABLE Topico (
 CREATE TABLE Resposta (
     id SERIAL PRIMARY KEY,
     mensagem TEXT NOT NULL,
-    data_criacao TIMESTAMP NOT NULL,
+    data_criacao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     autor_id INT NOT NULL REFERENCES Usuario(id),
     topico_id INT NOT NULL REFERENCES Topico(id),
     solucao BOOLEAN NOT NULL

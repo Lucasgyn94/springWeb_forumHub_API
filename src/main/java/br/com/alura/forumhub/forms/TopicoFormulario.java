@@ -1,6 +1,9 @@
-package br.com.alura.forumhub.model;
+package br.com.alura.forumhub.forms;
 
 
+import br.com.alura.forumhub.model.Curso;
+import br.com.alura.forumhub.model.Topico;
+import br.com.alura.forumhub.model.Usuario;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
